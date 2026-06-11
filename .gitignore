@@ -1,0 +1,7 @@
+# LibreOffice / temp locks
+.~lock.*#
+.DS_Store
+# Node
+node_modules/
+# Archivos personales (no subir tu CV/tracker real)
+*_PERSONAL*
