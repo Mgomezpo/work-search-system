@@ -4,11 +4,13 @@ El sistema busca vacantes con el **conector de Indeed**. Es de solo lectura: bus
 
 ## Conectarlo
 
-1. En Claude/Cowork, abre **Settings → Connectors** (o pidele a Claude: *"conecta el conector de Indeed"* y te guiara / lo sugerira desde el registro de conectores).
+1. Abre **Settings → Connectors** (o pídele a Claude: *"conecta el conector de Indeed"* y te guiara desde el registro de conectores).
 2. Busca **Indeed** y autoriza el acceso.
 3. Listo. Claude ya puede usar las herramientas del conector.
 
-## Herramientas disponibles
+> **Sin el conector disponible:** pide al usuario que copie y pegue la descripcion de la vacante desde Indeed. Claude extrae los campos relevantes del texto y los agrega al tracker igual que si hubiera usado `get_job_details`.
+
+## Herramientas disponibles (cuando el conector esta activo)
 
 - `search_jobs(search, location, country_code, job_type)` — busca vacantes. `location` acepta una ciudad o `"remote"`.
 - `get_job_details(job_id)` — descripcion completa, salario y link de aplicacion de una vacante.
@@ -25,4 +27,4 @@ El sistema busca vacantes con el **conector de Indeed**. Es de solo lectura: bus
 ## Limites importantes
 
 - **No se aplica desde aqui.** El envio lo haces tu desde el link. Opcional: Claude puede ayudarte a *llenar* formularios con Claude en Chrome, pero el clic final lo das tu.
-- Algunas vacantes piden **ciudadania/visa** o ubicacion especifica. Revisa `get_job_details` antes de invertir en un CV tailored.
+- Algunas vacantes piden **ciudadania/visa** o ubicacion especifica. Revisa `get_job_details` (o el texto de la vacante) antes de invertir en un CV tailored.
